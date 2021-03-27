@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "54fee35e-4c10-4d56-9881-09a4a1f74f2a",
+		"name": "Smile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "metodoModelo_getAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/smiles/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smiles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/buscar/wish-list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigoSmiles\":\"1234560003\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/smiles/buscar/wish-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smiles",
+						"buscar",
+						"wish-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/buscar/wish-list Com data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigoSmiles\":\"1234560003\",\r\n    \"dataInicio\":\"2020-01-01\",\r\n    \"dataFim\":\"2021-12-01\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/smiles/buscar/wish-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smiles",
+						"buscar",
+						"wish-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cadastrar/wish-list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigoSmiles\":\"1234560003\",\r\n    \"dataInicio\":\"2020-01-01\",\r\n    \"dataFim\":\"2021-12-01\",\r\n    \"localOrigem\":\"POA\",\r\n    \"localDestino\":\"REC\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/smiles/cadastrar/wish-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smiles",
+						"cadastrar",
+						"wish-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "metodoModelo_ParametroId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "con",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/smiles/buscar/id?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smiles",
+						"buscar",
+						"id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "metodoModelo_ParametroString",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/smiles/buscar/descricao?descricao=Descrição smiles 1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smiles",
+						"buscar",
+						"descricao"
+					],
+					"query": [
+						{
+							"key": "descricao",
+							"value": "Descrição smiles 1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "metodoModelo_ParametroObjeto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valorParametro\": \"Ida\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/smiles/buscar/objeto?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smiles",
+						"buscar",
+						"objeto"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "metodoModelo_cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valorParametro\": \"Ida\",\r\n    \"codigoRelacionamento\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/smiles/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smiles",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

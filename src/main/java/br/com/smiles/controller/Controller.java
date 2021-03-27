@@ -97,7 +97,7 @@ public class Controller {
         WishListEntity wishListEntity = parametro.convertToEntidadeWishList(usuarioRepository, new BigDecimal("1100"));
         wishListRepository.save(wishListEntity);
 
-        URI uri = uriComponentsBuilder.path("/metodo-modelo/modelo/{id}").buildAndExpand(wishListEntity.getId()).toUri();
+        URI uri = uriComponentsBuilder.path("/smiles/buscar/wish-list/{id}").buildAndExpand(wishListEntity.getId()).toUri();
         return ResponseEntity.created(uri).body(new WishListDto(wishListEntity));
     }
 
