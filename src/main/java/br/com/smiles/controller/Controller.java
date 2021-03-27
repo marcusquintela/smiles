@@ -1,12 +1,12 @@
-package br.com.modelo.controller;
+package br.com.smiles.controller;
 
-import br.com.modelo.controller.dto.ObjetoRetornoDto;
-import br.com.modelo.controller.form.ObjetoParametroForm;
-import br.com.modelo.excecoes.ParametrosInvalidoException;
-import br.com.modelo.model.EntidadeModelo;
-import br.com.modelo.repository.ModeloRelacionadaRepository;
-import br.com.modelo.repository.ModeloRepository;
-import br.com.modelo.util.UtilValidador;
+import br.com.smiles.controller.dto.ObjetoRetornoDto;
+import br.com.smiles.controller.form.ObjetoParametroForm;
+import br.com.smiles.excecoes.ParametrosInvalidoException;
+import br.com.smiles.model.EntidadeModelo;
+import br.com.smiles.repository.ModeloRelacionadaRepository;
+import br.com.smiles.repository.ModeloRepository;
+import br.com.smiles.util.UtilValidador;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +18,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/modelo")
-public class ModeloController {
+public class Controller {
 
     @Autowired
     ModeloRepository modeloRepository;

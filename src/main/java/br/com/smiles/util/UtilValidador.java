@@ -1,6 +1,6 @@
-package br.com.modelo.util;
+package br.com.smiles.util;
 
-import br.com.modelo.excecoes.ParametrosInvalidoException;
+import br.com.smiles.excecoes.ParametrosInvalidoException;
 import org.springframework.stereotype.Component;
 
 @Component

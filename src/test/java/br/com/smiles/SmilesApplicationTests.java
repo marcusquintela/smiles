@@ -1,10 +1,10 @@
-package br.com.modelo;
+package br.com.smiles;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ModeloApplicationTests {
+class SmilesApplicationTests {
 
 	@Test
 	void contextLoads() {

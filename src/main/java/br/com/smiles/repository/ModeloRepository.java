@@ -1,6 +1,6 @@
-package br.com.modelo.repository;
+package br.com.smiles.repository;
 
-import br.com.modelo.model.EntidadeModelo;
+import br.com.smiles.model.EntidadeModelo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

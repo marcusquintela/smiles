@@ -1,4 +1,4 @@
-package br.com.modelo.model;
+package br.com.smiles.model;
 
 import lombok.Data;
 

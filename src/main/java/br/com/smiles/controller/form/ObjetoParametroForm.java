@@ -1,8 +1,8 @@
-package br.com.modelo.controller.form;
+package br.com.smiles.controller.form;
 
-import br.com.modelo.model.EntidadeModelo;
-import br.com.modelo.model.EntidadeModeloRelacionada;
-import br.com.modelo.repository.ModeloRelacionadaRepository;
+import br.com.smiles.model.EntidadeModelo;
+import br.com.smiles.model.EntidadeModeloRelacionada;
+import br.com.smiles.repository.ModeloRelacionadaRepository;
 import lombok.Data;
 
 import javax.xml.bind.annotation.XmlRootElement;
