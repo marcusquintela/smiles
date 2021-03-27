@@ -4,8 +4,6 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Calendar;
-import java.util.Collection;
-import java.util.List;
 
 @Data
 @Entity
@@ -15,13 +13,12 @@ public class WishList {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @OneToOne
+    @ManyToOne
     private Usuario usuario;
 
     private Calendar dataInicio;
     private Calendar dataFim;
     private String local;
-
 
 
 }

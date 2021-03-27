@@ -18,6 +18,6 @@ public class Usuario {
 
     private String nome;
 
-    @OneToOne
+    @OneToMany(mappedBy = "usuario")
     private List <WishList> wishList;
 }
