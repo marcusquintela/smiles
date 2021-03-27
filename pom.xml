@@ -11,7 +11,7 @@
 	<groupId>br.com.smile</groupId>
 	<artifactId>smile-dream-wish</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>modelo</name>
+	<name>Smile Dream Wish</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
