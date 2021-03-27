@@ -17,6 +17,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.math.BigDecimal;
 import java.net.URI;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -88,12 +89,17 @@ public class Controller {
     public List<WishListDto> buscarWishList(@RequestBody BuscarWishListForm parametro) throws ParametrosInvalidoException {
         UtilValidador.validaBusca(parametro);
 
-        List<WishListEntity> wishList = wishListRepository.findByUsuarioEntityCodigoSmiles(parametro.getCodigoSmiles());
+        List<WishListEntity> wishLists = wishListRepository.findByUsuarioEntityCodigoSmiles(parametro.getCodigoSmiles());
 
         if(UtilValidador.buscaPorData(parametro))
-            wishList = wishListRepository.findByUsuarioEntityCodigoSmilesAndDataIdaBetween(parametro.getCodigoSmiles(), parametro.getDataInicio(), parametro.getDataFim());
+            wishLists = wishListRepository.findByUsuarioEntityCodigoSmilesAndDataIdaBetween(parametro.getCodigoSmiles(), parametro.getDataInicio(), parametro.getDataFim());
 
-        return WishListDto.toList(wishList);
+        if(UtilValidador.isNotEmpty(parametro.getDescricaoWish())){
+            Optional<WishListEntity> any = wishLists.stream().filter(wishListEntity -> wishListEntity.getDescricao().equals(parametro.getDescricaoWish())).findAny();
+            return WishListDto.toList(Arrays.asList(any.get()));
+        }
+
+        return WishListDto.toList(wishLists);
     }
 
     @PostMapping("/cadastrar/wish-list")

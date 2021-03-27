@@ -26,4 +26,8 @@ public class UtilValidador {
     public static boolean buscaPorData(BuscarWishListForm parametro) {
         return (parametro.getDataFim() != null || parametro.getDataFim() != null);
     }
+
+    public static boolean isNotEmpty(String string) {
+        return (string != null && !string.isEmpty());
+    }
 }

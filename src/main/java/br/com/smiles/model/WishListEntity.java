@@ -17,6 +17,8 @@ public class WishListEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String descricao;
+
     @ManyToOne
     private UsuarioEntity usuarioEntity;
 
@@ -26,7 +28,8 @@ public class WishListEntity {
     private String localDestino;
     private BigDecimal cotacaoAtual;
 
-    public WishListEntity(UsuarioEntity usuarioEntity, LocalDate dataIda, LocalDate dataVolta, String localOrigem, String localDestino, BigDecimal cotacaoAtual) {
+    public WishListEntity(String descricao, UsuarioEntity usuarioEntity, LocalDate dataIda, LocalDate dataVolta, String localOrigem, String localDestino, BigDecimal cotacaoAtual) {
+        this.descricao = descricao;
         this.usuarioEntity = usuarioEntity;
         this.dataIda = dataIda;
         this.dataVolta = dataVolta;

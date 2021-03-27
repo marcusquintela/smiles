@@ -107,6 +107,40 @@
 			"response": []
 		},
 		{
+			"name": "/buscar/wish-list Com Descricao",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigoSmiles\":\"1234560003\",\r\n    \"descricaoWish\":\"Natal\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/smiles/buscar/wish-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smiles",
+						"buscar",
+						"wish-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "/cadastrar/wish-list",
 			"request": {
 				"method": "POST",

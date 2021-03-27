@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 @XmlRootElement(name = "wish-list-dto")
 public class WishListDto {
 
+    private String descricao;
     private LocalDate dataIda;
     private LocalDate dataVolta;
     private String localOrigem;
@@ -24,6 +25,7 @@ public class WishListDto {
     private BigDecimal cotacaoAtual;
 
     public WishListDto(WishListEntity wishListEntity) {
+        this.descricao = wishListEntity.getDescricao();
         this.dataIda = wishListEntity.getDataIda();
         this.dataVolta = wishListEntity.getDataVolta();
         this.localOrigem = wishListEntity.getLocalOrigem();
@@ -38,6 +40,7 @@ public class WishListDto {
     private static WishListDto convertModeloToObjetoRetornoDto(WishListEntity wishListEntity) {
         if (wishListEntity != null) {
             return new WishListDto(
+                    wishListEntity.getDescricao(),
                     wishListEntity.getDataIda(),
                     wishListEntity.getDataVolta(),
                     wishListEntity.getLocalOrigem(),

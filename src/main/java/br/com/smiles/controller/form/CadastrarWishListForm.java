@@ -12,6 +12,7 @@ import java.time.LocalDate;
 @Data
 @XmlRootElement(name = "parametro")
 public class CadastrarWishListForm {
+    private String descricao;
     private String codigoSmiles;
     private LocalDate dataInicio;
     private LocalDate dataFim;
@@ -21,7 +22,7 @@ public class CadastrarWishListForm {
     public WishListEntity convertToEntidadeWishList(UsuarioRepository usuarioRepository, BigDecimal valorCotacao) {
 
         UsuarioEntity usuario = usuarioRepository.findByCodigoSmiles(codigoSmiles);
-        WishListEntity wishListEntity = new WishListEntity(usuario,
+        WishListEntity wishListEntity = new WishListEntity(descricao, usuario,
                 dataInicio, dataFim, localOrigem, localDestino, valorCotacao);
 
         return wishListEntity;
