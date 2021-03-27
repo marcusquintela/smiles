@@ -8,8 +8,8 @@
 		<version>2.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com</groupId>
-	<artifactId>modelo</artifactId>
+	<groupId>br.com.smile</groupId>
+	<artifactId>smile-dream-wish</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>modelo</name>
 	<description>Demo project for Spring Boot</description>
