@@ -1,10 +1,10 @@
 
-INSERT INTO ENTIDADE_MODELO_RELACIONADA(descricao_relacao) VALUES ('Descrição modelo relação 1');
-INSERT INTO ENTIDADE_MODELO_RELACIONADA(descricao_relacao) VALUES ('Descrição modelo relação 2');
+INSERT INTO ENTIDADE_MODELO_RELACIONADA(descricao_relacao) VALUES ('Descrição smiles relação 1');
+INSERT INTO ENTIDADE_MODELO_RELACIONADA(descricao_relacao) VALUES ('Descrição smiles relação 2');
 
 
-INSERT INTO ENTIDADE_MODELO(descricao, entidade_modelo_relacionada_id) VALUES ('Descrição modelo 1', 1);
-INSERT INTO ENTIDADE_MODELO(descricao, entidade_modelo_relacionada_id) VALUES ('Descrição modelo 2', 1);
-INSERT INTO ENTIDADE_MODELO(descricao, entidade_modelo_relacionada_id) VALUES ('Descrição modelo 3', 1);
-INSERT INTO ENTIDADE_MODELO(descricao, entidade_modelo_relacionada_id) VALUES ('Descrição modelo 4', 2);
-INSERT INTO ENTIDADE_MODELO(descricao, entidade_modelo_relacionada_id) VALUES ('Descrição modelo 5', 2);
+INSERT INTO ENTIDADE_MODELO(DESCRICAO, ENTIDADE_MODELO_RELACIONADA_ID) VALUES ('Descrição smiles 1', 1);
+INSERT INTO ENTIDADE_MODELO(DESCRICAO, ENTIDADE_MODELO_RELACIONADA_ID) VALUES ('Descrição smiles 2', 1);
+INSERT INTO ENTIDADE_MODELO(DESCRICAO, ENTIDADE_MODELO_RELACIONADA_ID) VALUES ('Descrição smiles 3', 1);
+INSERT INTO ENTIDADE_MODELO(DESCRICAO, ENTIDADE_MODELO_RELACIONADA_ID) VALUES ('Descrição smiles 4', 2);
+INSERT INTO ENTIDADE_MODELO(DESCRICAO, ENTIDADE_MODELO_RELACIONADA_ID) VALUES ('Descrição smiles 5', 2);

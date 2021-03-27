@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "7ab7527a-9742-42ca-a37b-3555b59ec47c",
-		"name": "Modelo",
+		"name": "Smile",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -24,14 +24,14 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/modelo/",
+					"raw": "http://localhost:8080/smiles/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"modelo",
+						"smiles",
 						""
 					]
 				}
@@ -57,14 +57,14 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/modelo/buscar/id?id=1",
+					"raw": "http://localhost:8080/smiles/buscar/id?id=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"modelo",
+						"smiles",
 						"buscar",
 						"id"
 					],
@@ -91,21 +91,21 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/modelo/buscar/descricao?descricao=Descrição modelo 1",
+					"raw": "http://localhost:8080/smiles/buscar/descricao?descricao=Descrição smiles 1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"modelo",
+						"smiles",
 						"buscar",
 						"descricao"
 					],
 					"query": [
 						{
 							"key": "descricao",
-							"value": "Descrição modelo 1"
+							"value": "Descrição smiles 1"
 						}
 					]
 				}
@@ -131,14 +131,14 @@
 					"raw": "{\r\n    \"valorParametro\": \"Ida\"\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/modelo/buscar/objeto?",
+					"raw": "http://localhost:8080/smiles/buscar/objeto?",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"modelo",
+						"smiles",
 						"buscar",
 						"objeto"
 					],
@@ -168,14 +168,14 @@
 					"raw": "{\r\n    \"valorParametro\": \"Ida\",\r\n    \"codigoRelacionamento\":1\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/modelo/cadastrar",
+					"raw": "http://localhost:8080/smiles/cadastrar",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"modelo",
+						"smiles",
 						"cadastrar"
 					]
 				}

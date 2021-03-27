@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/modelo")
+@RequestMapping("/smiles")
 public class Controller {
 
     @Autowired
