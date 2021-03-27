@@ -88,7 +88,12 @@ public class Controller {
     public List<WishListDto> buscarWishList(@RequestBody BuscarWishListForm parametro) throws ParametrosInvalidoException {
         UtilValidador.validaBusca(parametro);
 
-        return WishListDto.toList(wishListRepository.buscaWishList(parametro));
+        List<WishListEntity> wishList = wishListRepository.findByUsuarioEntityCodigoSmiles(parametro.getCodigoSmiles());
+
+        if(UtilValidador.buscaPorData(parametro))
+            wishList = wishListRepository.findByUsuarioEntityCodigoSmilesAndDataIdaBetween(parametro.getCodigoSmiles(), parametro.getDataInicio(), parametro.getDataFim());
+
+        return WishListDto.toList(wishList);
     }
 
     @PostMapping("/cadastrar/wish-list")
