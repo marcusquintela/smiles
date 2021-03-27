@@ -1,17 +1,21 @@
 package br.com.smiles.controller;
 
 import br.com.smiles.controller.dto.ObjetoRetornoDto;
+import br.com.smiles.controller.dto.WishListDto;
+import br.com.smiles.controller.form.BuscarWishListForm;
+import br.com.smiles.controller.form.CadastrarWishListForm;
 import br.com.smiles.controller.form.ObjetoParametroForm;
 import br.com.smiles.excecoes.ParametrosInvalidoException;
 import br.com.smiles.model.EntidadeModelo;
-import br.com.smiles.repository.ModeloRelacionadaRepository;
-import br.com.smiles.repository.ModeloRepository;
+import br.com.smiles.model.WishListEntity;
+import br.com.smiles.repository.*;
 import br.com.smiles.util.UtilValidador;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.math.BigDecimal;
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
@@ -25,6 +29,12 @@ public class Controller {
 
     @Autowired
     ModeloRelacionadaRepository modeloRelacionadaRepository;
+
+    @Autowired
+    WishListRepository wishListRepository;
+
+    @Autowired
+    UsuarioRepository usuarioRepository;
 
     @Autowired
     UtilValidador utilValidador;
@@ -67,4 +77,28 @@ public class Controller {
         URI uri = uriComponentsBuilder.path("/metodo-modelo/modelo/{id}").buildAndExpand(modelo.getId()).toUri();
         return ResponseEntity.created(uri).body(new ObjetoRetornoDto(modelo));
     }
+//////// FIM DO MODELO
+
+
+    /***
+     * Smiles inicio
+     */
+
+    @GetMapping("/buscar/wish-list")
+    public List<WishListDto> buscarWishList(@RequestBody BuscarWishListForm parametro) throws ParametrosInvalidoException {
+        UtilValidador.validaBusca(parametro);
+
+        return WishListDto.toList(wishListRepository.buscaWishList(parametro));
+    }
+
+    @PostMapping("/cadastrar/wish-list")
+    public ResponseEntity<WishListDto> cadastrarWishList(@RequestBody CadastrarWishListForm parametro, UriComponentsBuilder uriComponentsBuilder) throws ParametrosInvalidoException {
+
+        WishListEntity wishListEntity = parametro.convertToEntidadeWishList(usuarioRepository, new BigDecimal("1100"));
+        wishListRepository.save(wishListEntity);
+
+        URI uri = uriComponentsBuilder.path("/metodo-modelo/modelo/{id}").buildAndExpand(wishListEntity.getId()).toUri();
+        return ResponseEntity.created(uri).body(new WishListDto(wishListEntity));
+    }
+
 }
