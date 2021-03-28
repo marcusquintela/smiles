@@ -1,6 +1,5 @@
 package br.com.smiles.controller.dto;
 
-import br.com.smiles.model.EntidadeModelo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
