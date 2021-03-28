@@ -15,8 +15,7 @@ import java.time.LocalDate;
 public class WishListEntity {
 
     @Id
-    @GeneratedValue(generator = "increment")
-    @GenericGenerator(name = "increment", strategy = "increment")
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String descricao;
